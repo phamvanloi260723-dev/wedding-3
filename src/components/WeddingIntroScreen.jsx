@@ -31,7 +31,7 @@ const WeddingIntroScreen = ({ onOpen }) => {
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
-        className="relative z-10 flex flex-col items-center text-center px-6 py-16 max-w-[90%] w-[500px]"
+        className="relative z-10 flex flex-col items-center text-center px-4 py-12 max-w-[95%] w-[450px]"
       >
         <div className="absolute inset-0 glass-premium rounded-[60px] -z-10 opacity-90 shadow-2xl" />
         
@@ -55,10 +55,10 @@ const WeddingIntroScreen = ({ onOpen }) => {
           </motion.h1>
           
           <motion.div
-            initial={{ scale: 0, rotate: -45 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ type: "spring", stiffness: 100, delay: 1.2 }}
-            className="bg-white/80 p-3 rounded-full shadow-lg my-2"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 1.2, duration: 1 }}
+            className="bg-white/80 p-2 rounded-full shadow-lg my-2"
           >
             <Heart fill="currentColor" className="text-luxury-rose w-6 h-6 animate-pulse" />
           </motion.div>
@@ -82,7 +82,7 @@ const WeddingIntroScreen = ({ onOpen }) => {
           <div className="w-12 h-[1px] bg-luxury-gold/40" />
           
           <p className="font-heading text-lg md:text-xl text-luxury-gold tracking-[0.2em] italic uppercase">
-            {siteConfig.events[0].date}
+            {siteConfig.events[1].date}
           </p>
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -98,10 +98,10 @@ const WeddingIntroScreen = ({ onOpen }) => {
 
       {/* Elegant Frame Corners */}
       <motion.div>  
-      <div className="absolute top-10 left-10 border-t-4 border-l-4 border-gold/20 w-16 h-16 rounded-tl-2xl" />
-      <div className="absolute top-10 right-10 border-t-4 border-r-4 border-gold/20 w-16 h-16 rounded-tr-2xl" />
-      <div className="absolute bottom-10 left-10 border-b-4 border-l-4 border-gold/20 w-16 h-16 rounded-bl-2xl" />
-      <div className="absolute bottom-10 right-10 border-b-4 border-r-4 border-gold/20 w-16 h-16 rounded-br-2xl" />
+      <div className="absolute top-10 left-10 border-t-8 border-l-8 border-gold/40 w-16 h-16 rounded-tl-2xl" />
+      <div className="absolute top-10 right-10 border-t-8 border-r-8 border-gold/40 w-16 h-16 rounded-tr-2xl" />
+      <div className="absolute bottom-10 left-10 border-b-8 border-l-8 border-gold/40 w-16 h-16 rounded-bl-2xl" />
+      <div className="absolute bottom-10 right-10 border-b-8 border-r-8 border-gold/40 w-16 h-16 rounded-br-2xl" />
     </motion.div>
     </motion.div>
   );
