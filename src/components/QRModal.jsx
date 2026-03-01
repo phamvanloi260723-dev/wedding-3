@@ -23,7 +23,7 @@ const QRModal = ({ isOpen, onClose, person }) => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-white w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl relative flex flex-col items-center p-8 border-2 border-gold/10"
+          className="bg-white w-full max-w-lg md:max-w-xl rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.25)] relative flex flex-col items-center p-10 md:p-12 border border-gold/20"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
@@ -33,7 +33,7 @@ const QRModal = ({ isOpen, onClose, person }) => {
             >
               <X size={24} />
             </button>
-            <div className="w-48 h-48 bg-gray-50 rounded-2xl p-4 mb-6 border border-gray-100 flex items-center justify-center">
+            <div className="w-60 h-60 md:w-72 md:h-72 bg-gray-50 rounded-2xl p-5 mb-8 border border-gray-100 flex items-center justify-center">
                 {person?.qrCode ? (
                   <img 
                       src={person.qrCode} 
